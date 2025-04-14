@@ -1,4 +1,4 @@
-from categorias import categorizar_edad
+from categoria import categorizar_edad
 
 edad = int(input("Ingresa tu edad: "))
 

@@ -1,19 +1,14 @@
-from resumen import ResumenEdades
-
+from resumen import ResumenEdades # type: ignore
 resumen = ResumenEdades()
-contador = 1  # Para numerar cada edad válida ingresada
-
-print("👋 Ingresá edades una por una. Escribí 'fin' para terminar.\n")
-
+contador = 1 #Para enumerar las edades ingresadas
+print("Ingrese edades uno por uno. Escribe 'fin' para terminar.")
 while True:
-    entrada = input(f"Edad {contador}: ")
-    
-    if entrada.lower() == "fin":
+    entrada = input(f"Edad{contador}:")
+    if entrada.lower()== "fin":
         break
-
-    if entrada.lstrip("-").isdigit():
-        edad = int(entrada)
+    if entrada.Istrip("-").isdigit():
+        edad= int(entrada)
         resumen.agregar_edad(edad)
-        contador += 1  # Solo se incrementa si la entrada fue válida
+        contador += 1 #Solo aumenta cuando la entrada sea válida
     else:
-        print("⚠ Edad inválida. Ingresá un número o 'fin' para terminar.")
+        print("Edad errónea. Ingrese un numero o un 'fin' para terminar")
